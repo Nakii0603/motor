@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -30,22 +31,28 @@ export default function RootLayout({
       >
         <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/30 bg-black/40">
           <nav className="max-w-screen-md mx-auto px-5 py-3 flex items-center justify-between">
-            <a
+            <Link
               href="/"
               className="text-base font-semibold tracking-tight text-[--color-brand-orange]"
             >
               Motor Oil Co.
-            </a>
+            </Link>
             <div className="flex items-center gap-4 text-sm">
-              <a href="/products" className="hover:text-[--color-brand-orange]">
+              <Link
+                href="/products"
+                className="hover:text-[--color-brand-orange]"
+              >
                 Products
-              </a>
-              <a href="/about" className="hover:text-[--color-brand-orange]">
+              </Link>
+              <Link href="/about" className="hover:text-[--color-brand-orange]">
                 About
-              </a>
-              <a href="/contact" className="hover:text-[--color-brand-orange]">
+              </Link>
+              <Link
+                href="/contact"
+                className="hover:text-[--color-brand-orange]"
+              >
                 Contact
-              </a>
+              </Link>
             </div>
           </nav>
           <div className="h-1 w-full bg-gradient-to-r from-[--color-brand-blue-dark] via-[--color-brand-orange] to-[--color-brand-blue-dark]" />
